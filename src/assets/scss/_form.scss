@@ -1,0 +1,46 @@
+form{
+    display: block;
+    width: 100%;
+}
+.form-group{
+    display: block;
+    width: 100%;
+    margin-top: 24px;
+
+    .error_text{
+        color: $marsalla;
+        font-size: 10px;
+    }
+
+    label{
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        color: $text;
+        margin-bottom: 12px;
+    }
+    input,
+    select,
+    textarea{
+        display: block;
+        width: 100%;
+        background-color: $grey;
+        border: none;
+        color: $text;
+        font-family: "Segoe UI";
+        padding: 0 24px;
+        box-sizing
+        &.error{
+            border-bottom: 2px solid $marsalla;
+        }
+    }
+    input,
+    select{
+        height: 50px;
+    }
+    textarea{
+        height: 260px;
+        min-height: 100px;
+        padding: 24px;
+    }
+}

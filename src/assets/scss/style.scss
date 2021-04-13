@@ -1,0 +1,147 @@
+@import "fontello.scss";
+@import "../fonts/SegoeUI/stylesheet.scss";
+@import "vars";
+@import "vendor/reset";
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: $text;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+a  {
+    color: inherit;
+    text-decoration: none;
+    transition: .3s ease;
+    &:hover {
+        text-decoration: underline;
+    }
+    &:focus{
+        outline: transparent;
+    }
+}
+.site{
+    width: 100%;
+    overflow: hidden;
+    &__container{
+        display: flex;
+        height: 100vh;
+    }
+    &__sidebar{
+        position: relative;
+        width: auto;
+        background-color: $grey;
+        z-index: 9999;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        width: calc(100vw - 80px);
+        flex: 0 0 calc(100vw - 80px);
+        height: 100%;
+        overflow: auto;
+    }
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+}
+.page{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
+}
+section{
+    position: relative;
+}
+.pagewrap{
+    width: 100%;
+    max-width: 690px
+}
+
+.section{
+    padding: 50px 40px;
+    &__title{
+        font-size: 42px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    &__description{
+        font-size: 18px;
+    }
+}
+.btn__block{
+    margin-top: 50px;
+}
+.btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    height: 42px;
+    padding: 0 32px 2px;
+    border: 2px solid $blue;
+    border-radius: 40px;
+    transition: all .3s ease;
+    color: #fff;
+    background-color: $blue;
+    font-size: 14px;
+    &:hover{
+        text-decoration: none;
+        background-color: darken($blue, 20%);
+        border-color: darken($blue, 20%);
+    }
+    &--pink{
+        background-color: $marsalla;
+        border: 2px solid $marsalla;
+        &:hover{
+            text-decoration: none;
+            background-color: darken($marsalla, 20%);
+            border-color: darken($marsalla, 20%);
+        }
+
+    }
+}
+.link{
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    color: $marsalla;
+    i{
+        margin-right: 12px;
+    }
+}
+.color_white{
+    color: $white;
+}
+.bg_blue{
+    background-color: $blue;
+    color: $white
+}
+
+
+@import 'page_transition';
+@import 'sidebar';
+@import 'header_footer';
+@import 'main_section';
+@import 'about';
+@import 'projects';
+@import 'lets_talk';
+@import 'form';
+@import 'decorations';
+@import 'skils';
+@import 'project';

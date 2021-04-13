@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {{> head }}
+</head>
+<body data-barba="wrapper">
+    <div class="site">
+        <div class="site__container">
+            <div class="site__sidebar">{{> sidebar }}</div>
+            <div class="site__content">
+                <div class="wrapper">
+                    {{> header }}
+                    {{> body }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page_transition"></div>
+    <!-- JS -->
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

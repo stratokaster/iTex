@@ -1,0 +1,161 @@
+.sidebar{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100px;
+    height: 100%;
+    box-sizing: border-box;
+    transition: width .4s ease-in-out;
+    overflow: hidden;
+    &__header{
+        position: relative;
+        width: 100%;
+        padding: 34px;
+    }
+    &__body{
+        flex-grow: 1;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: calc(100% + 20px);
+        margin: 76px 0 0;
+        padding-left: 34px;
+        padding-right: 20px;
+
+        &.scrollable{
+            padding-right: 0;
+        }
+    }
+    &__footer{
+        padding: 34px;
+    }
+    &.active{
+        width: 40vw;
+        #hamburger{
+            span{
+                &:last-child{
+                    &:after{
+                        background-color: $blue;
+                        transform: scaleX(2);
+                    }
+                }
+            }
+        }
+        // #menu{
+        //     transform: translateX(0);
+        //     opacity: 1;
+        //     visibility: visible;
+        // }
+        .sidebar__arrow{
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+    }
+    &__arrow{
+        position: absolute;
+        top: 40px;
+        right: 38px;
+        font-size: 24px;
+        color: $marsalla;
+        line-height: 1;
+        letter-spacing: 0;
+        transform: translateX(50px);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.4s ease-in-out;
+        transition-property: transform opacity;
+        cursor: pointer;
+    }
+    #menu{
+        width: 100%;
+        // transition: 0.4s ease-in-out;
+        // transition-property: transform opacity;
+        // transform: translateX(50px);
+        // opacity: 0;
+        // visibility: hidden;
+        padding-right: 34px;
+        width: calc(40vw - 34px);
+        ul{
+            li{
+                transform: translateX(200px);
+                opacity: 0;
+                a{
+                    position: relative;
+                    display: block;
+                    padding: 12px 0;
+                    font-size: 24px;
+                    letter-spacing: 2px;
+                    transition: none;
+                    &:hover{
+                        text-decoration: none;
+                        font-weight: bold;
+                        &::after{
+                            transform: scaleX(1)
+                        }
+                    }
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: -3px;
+                        width: 32px;
+                        height: 6px;
+                        background-color: $marsalla;
+                        transition: transform .4s ease-in-out;
+                        transform: scaleX(0);
+                        transform-origin: 0 0;
+                    }
+                }
+            }
+        }
+    }
+    &__socials{
+        ul{
+            li{
+                font-size: 24px;
+                a{
+                    display: block;
+                    &:hover{
+                        text-decoration: none;
+                        transform: translateY(-2px)
+                    }
+                }
+            }
+        }
+    }
+}
+#hamburger{
+    display: inline-flex;
+    flex-direction: column;
+    cursor: pointer;
+    span{
+        display: flex;
+        &::before,
+        &::after{
+            content: '';
+            display: block;
+            width: 12px;
+            height: 12px;
+            margin: 2px;
+            transition: transform .4s ease-in-out;
+            transform-origin: 0 0;
+        }
+        &:first-child{
+            &:before{
+                background-color: $yellow;
+            }
+            &:after{
+                background-color: $marsalla;
+            }
+        }
+        &:last-child{
+            &:before{
+                background-color: $violet;
+            }
+            &:after{
+                background-color: $blue;
+            }
+        }
+    }
+}

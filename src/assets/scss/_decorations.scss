@@ -1,0 +1,111 @@
+.square{
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-400px);
+    z-index: -1;
+}
+.decorations{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+.main_decorations{
+    bottom: 0;
+    right: 0;
+    .square1{
+        bottom: 0;
+        right: 100%;
+        background-color: $violet;
+    }
+    .square2{
+        bottom: 100%;
+        right: 0;
+        background-color: $brown;
+    }
+    .square3{
+        bottom: calc(100% + 50px);
+        right: 100%;
+        background-color: $blue;
+    }
+    .square4{
+        bottom: 450%;
+        right: 100%;
+        background-color: $marsalla;
+    }
+    .square5{
+        bottom: 350%;
+        right: 500%;
+        background-color: $green;
+    }
+    .square6{
+        bottom: 450%;
+        right: 900%;
+        background-color: $yellow;
+    }
+}
+.about_decorations{
+    bottom: 0;
+    right: 0;
+    .square1{
+        bottom: 0;
+        right: 100%;
+        background-color: $violet;
+    }
+    .square2{
+        bottom: 100%;
+        right: 0;
+        background-color: $brown;
+    }
+    .square3{
+        bottom: calc(100% + 50px);
+        right: 100%;
+        background-color: $blue;
+    }
+    .square4{
+        bottom: 600%;
+        right: 100%;
+        background-color: $marsalla;
+    }
+    .square5{
+        bottom: 500%;
+        right: 550%;
+        background-color: $green;
+    }
+    .square6{
+        bottom: 1500%;
+        right: 500%;
+        background-color: $yellow;
+    }
+}
+.lets_talk_decorations{
+    bottom: 0;
+    right: 0;
+    .square1{
+        bottom: 0;
+        right: 100%;
+        background-color: $violet;
+    }
+    .square2{
+        bottom: 100%;
+        right: 0;
+        background-color: $brown;
+    }
+    .square3{
+        bottom: calc(100% + 50px);
+        right: 100%;
+        background-color: $blue;
+    }
+    .square4{
+        bottom: 600%;
+        right: 100%;
+        background-color: $marsalla;
+    }
+    .square6{
+        bottom: 1500%;
+        right: 500%;
+        background-color: $yellow;
+    }
+}
